@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nadil Rahman | Portfolio</title>
+
+<!-- Meta description -->
+<meta name="description" content="Im a young full stacker and web designer like things">
+
+<!-- Social preview -->
+<meta property="og:title" content="Nadil Rahman | Portfolio">
+<meta property="og:description" content="Im a young full stacker and web designer like things">
+<meta property="og:image" content="https://i.postimg.cc/w3DGHNx4/Whats-App-Image-2026-04-12-at-12-20-30-PM.jpg">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" href="https://i.postimg.cc/w3DGHNx4/Whats-App-Image-2026-04-12-at-12-20-30-PM.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#020617;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  z-index:1000;
+}
+
+.gradient-text{
+  background: linear-gradient(45deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight:600;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+nav ul li{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+nav ul li:hover{
+  color:#38bdf8;
+}
+
+/* HEADER */
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+header h1{
+  font-size:3rem;
+}
+
+header span{
+  color:#38bdf8;
+}
+
+header p{
+  margin:15px 0;
+  opacity:0.8;
+}
+
+/* PROFILE IMAGE */
+.profile{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:20px;
+  border:3px solid #38bdf8;
+  box-shadow:0 0 20px #38bdf8;
+  transition:0.3s;
+}
+
+.profile:hover{
+  transform:scale(1.1);
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  background:#38bdf8;
+  color:black;
+  border-radius:20px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+h2{
+  margin-bottom:20px;
+  color:#38bdf8;
+}
+
+.skills, .projects{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+/* CARDS */
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  width:200px;
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* PERCENT */
+.percent{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#38bdf8;
+  color:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1.5rem;
+  opacity:0;
+  transition:0.3s;
+  border-radius:15px;
+}
+
+.card:hover .percent,
+.card:active .percent{
+  opacity:1;
+}
+
+.project{
+  width:250px;
+}
+
+/* FORM */
+form input, form textarea{
+  width:250px;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+
+form textarea{
+  height:100px;
+}
+
+footer{
+  padding:20px;
+  text-align:center;
+  opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h3 class="gradient-text">Nadil Rahman</h3>
+  <ul>
+    <li onclick="go('about')">About</li>
+    <li onclick="go('skills')">Skills</li>
+    <li onclick="go('projects')">Projects</li>
+    <li onclick="go('contact')">Contact</li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <img src="https://i.postimg.cc/w3DGHNx4/Whats-App-Image-2026-04-12-at-12-20-30-PM.jpg" class="profile">
+  <h1>Hi, I'm <span>Nadil Rahman</span></h1>
+  <p>Full Stack Developer | Web Designer</p>
+  <button onclick="go('projects')">View My Work</button>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hi, I'm Nadil Rahman, a passionate Full Stack Developer and Web Designer.</p>
+  <p>I enjoy creating modern, responsive, and user-friendly websites.</p>
+  <p>I work with HTML, CSS, JavaScript, Python, and C.</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card">HTML<div class="percent">95%</div></div>
+    <div class="card">CSS<div class="percent">90%</div></div>
+    <div class="card">JavaScript<div class="percent">85%</div></div>
+    <div class="card">Python<div class="percent">88%</div></div>
+    <div class="card">C<div class="percent">80%</div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card project">
+      <h3>AI Assistant</h3>
+      <p>Voice assistant using Python</p>
+    </div>
+    <div class="card project">
+      <h3>Portfolio Website</h3>
+      <p>Responsive modern website</p>
+    </div>
+    <div class="card project">
+      <h3>Todo App</h3>
+      <p>Task manager using JS</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form action="https://formsubmit.co/nadilrahmanm@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+  </form>
+
+  <p>📞 8089049930</p>
+  <p>📧 nadilrahmanm@gmail.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Nadil Rahman</p>
+</footer>
+
+<script>
+function go(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
